@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+</head>
+<body>
+    <a>Login</a>
+    <a>Register</a>
+    <h1>Category List</h1>
+    <ul>
+        {% for category in categories %}
+            <li>
+                <a href="{% url 'category_detail' category.id %}">
+                    {{ category.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

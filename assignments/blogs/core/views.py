@@ -24,7 +24,7 @@ def blog_detail(request, post_id):
     context = {
         'post': post,
         'recent_comments': recent_comments,
-    }
+    } 
     return render(request, "post_detail.html", context)
 
 def post_detail(request, post_id):
