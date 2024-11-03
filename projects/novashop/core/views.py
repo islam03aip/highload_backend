@@ -81,9 +81,8 @@ def register(request):
     serializer = RegisterSerializer(data=request.data)
     
     if serializer.is_valid():
-        user = serializer.save()  # Save the user
+        user = serializer.save()
 
-        # Generate JWT token for the user
         refresh = RefreshToken.for_user(user)
         return Response({
             'refresh': str(refresh),
